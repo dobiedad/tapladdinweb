@@ -50,7 +50,30 @@ min-width:100% !important;
 h1 {
   color:yellow;
 }
+/* Fade transition for carousel items */
+.carousel .item {
+  left: 0 !important;
+  -webkit-transition: opacity 3s!important;; /*adjust timing here */
+  -moz-transition: opacity 0.5s!important;;
+  -o-transition: opacity 0.2s!important;;
+  transition: opacity 3s!important;;
+  background-color:rgba(139, 69, 19, 0.3) !important;
 
+}
+.carousel-control {
+  background-image: none !important; /* remove background gradients on controls */
+}
+/* Fade controls with items */
+.next.left,
+.prev.right {
+  opacity: 1;
+  z-index: 1;
+}
+.active.left,
+.active.right {
+  opacity: 0;
+  z-index: 2;
+}
 @media screen and (min-width : 1101px){
 .logo {
   margin-left:5%;
