@@ -1,10 +1,6 @@
 
 
 
-<head>
-  <title>Tap Laddin!</title>
-</head>
-
 <div class="carousel slide" id="mountains" data-ride="carousel">
 
 
@@ -19,8 +15,8 @@
       <div class="innerborder ">
 
 
-        <%=image_tag 'playstore.jpg', class:"appstore"%>
-        <%=image_tag 'appstore.png', class:"appstore"%>
+        <%=image_tag 'playstore.jpg', class:"appstore", onclick:"myFunction()"%>
+        <%=image_tag 'appstore.png', class:"appstore", onclick:"myFunction()" %>
 
       </div>
     </div>
@@ -40,3 +36,8 @@
 
   </div>
 </div>
+<script>
+function myFunction() {
+alert("Stay Tuned, Coming Soon!");
+}
+</script>
