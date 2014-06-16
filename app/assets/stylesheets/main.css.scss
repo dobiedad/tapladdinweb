@@ -48,15 +48,15 @@ min-width:100% !important;
   margin-bottom:-15px;
 }
 h1 {
-  color:yellow;
+  color:white;
 }
 /* Fade transition for carousel items */
 .carousel .item {
   left: 0 !important;
-  -webkit-transition: opacity 3s!important;; /*adjust timing here */
+  -webkit-transition: opacity 7s!important;; /*adjust timing here */
   -moz-transition: opacity 0.5s!important;;
   -o-transition: opacity 0.2s!important;;
-  transition: opacity 3s!important;;
+  transition: opacity 7s!important;;
   background-color:rgba(139, 69, 19, 0.3) !important;
 
 }
@@ -74,12 +74,54 @@ h1 {
   opacity: 0;
   z-index: 2;
 }
-@media screen and (min-width : 1101px){
+img.appstore:active {
+  filter: none;
+ -webkit-filter: blur(1px);
+}
+img.appstore:hover {
+  filter: none;
+ -webkit-filter: blur(1px);
+}
+h1{
+  font-size:28px;
+    font-family: "Courier New", Courier, monospace;
+}
+.appstore{
+  width:160px;
+  height:60px;
+  margin-top:5px;
+  border-radius:10px;
+  cursor:pointer;
+}
+.carousel-caption.logodiv{
+  top:5px !important;
+  bottom:none !important;
+  min-width: 100%;
+  left:0%;
+}
 .logo {
   margin-left:5%;
-  width:50%;
+  width:100%;
+  cursor:pointer;
+    -webkit-transition-duration: 4s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+
+}
+.logo:hover{
+  -webkit-transform:rotate(5deg);
+    -moz-transform:rotate(5deg);
+    -o-transform:rotate(5deg);
+
+}
+@media screen and (min-width : 760px){
+.logo {
+  margin-left:5%;
+  width:60%;
 }
 }
+
 @media screen and (max-width : 1100px){
   .carousel-inner > .item > img, .carousel-inner > .item > a > img{
 
@@ -92,15 +134,10 @@ h1 {
 .laddin{
   width:160px;
 }
-.logo {
-  margin-left:5%;
-  width:70%;
+
 }
-}
-.appstore{
-  width:160px;
-  height:60px;
-  margin-top:5px;
-  border-radius:10px;
-  cursor:pointer;
+@media screen and (max-width : 460px){
+  h1{
+    font-size:22px;
+  }
 }

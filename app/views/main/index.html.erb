@@ -4,19 +4,25 @@
 <div class="carousel slide" id="mountains" data-ride="carousel">
 
 
+<div class="carousel-caption logodiv ">
 
+
+
+    <a href="/"> <%=image_tag 'logo.svg', class:"logo"%> </a>
+
+
+  </div>
 
   <div class="carousel-inner  ">
 
     <div class="carousel-caption ">
-<%=image_tag 'logo.png', class:"logo"%>
 
       <h1 class="titlecaption">Coming Soon</h1>
       <div class="innerborder ">
 
 
-        <%=image_tag 'playstore.jpg', class:"appstore", onclick:"myFunction()"%>
-        <%=image_tag 'appstore.png', class:"appstore", onclick:"myFunction()" %>
+        <%=image_tag 'playstore.png', class:"appstore", onclick:"comingSoon()"%>
+        <%=image_tag 'appstore.png', class:"appstore", onclick:"comingSoon()" %>
 
       </div>
     </div>
@@ -37,7 +43,7 @@
   </div>
 </div>
 <script>
-function myFunction() {
+function comingSoon() {
 alert("Stay Tuned, Coming Soon!");
 }
 </script>
