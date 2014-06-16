@@ -35,12 +35,9 @@ body{
 }
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   display:inline;
-min-width:100%;
-  height:auto;
-  -moz-background-size: cover;
--webkit-background-size: cover;
--o-background-size: cover;
-size: contain;
+min-width:100% !important;
+  height:auto !important;
+
 }
 .carousel-inner{
 

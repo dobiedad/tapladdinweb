@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require jquery.tubular.1.0
 //= require bootstrap
+//= require jquery.carousel.fullscreen
+
 
 //= require turbolinks
