@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.tubular.1.0
+//= require bootstrap
+
 //= require turbolinks

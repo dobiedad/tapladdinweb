@@ -11,17 +11,55 @@
     margin-left: auto;
 width: 100%;
 text-align: center;
+font-family:"Courier New", Courier, monospace;
+font-size:14px;
+}
+.laddin{
+  width:160px;
 }
 .title{
 
 }
 body{
-  margin:0px;
+  margin:0px !important;
 
-  background: url(backgroundwebsite.svg);
+  background-color: #222 !important;
   height:200px;
   background-size: 100% auto; /* Fill width, retain proportions */
 
 
 
+}
+.carousel {
+  min-width:100%;
+}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  display:inline;
+min-width:100%;
+  height:auto;
+  -moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+size: contain;
+}
+.carousel-inner{
+
+}
+@media screen and (max-width : 1200px){
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img{
+
+  width:auto;
+    height: auto;
+  max-width: 100%;
+  background-size: auto auto; /* Fill width, retain proportions */
+
+}
+.laddin{
+  width:160px;
+}
+}
+.appstore{
+  width:160px;
+  height:60px;
+  margin-top:5px;
 }
