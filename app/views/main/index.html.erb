@@ -1,5 +1,8 @@
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div id="laddin"></div>
+
 
 
 <div class="carousel slide" id="mountains" data-ride="carousel">
@@ -21,42 +24,52 @@
       <h1 class="titlecaption">Coming Soon</h1>
       <div class="social ">
         <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.tapladdin.com%2F&t" >
-        <%=image_tag 'facebook.svg', class:"social"%></a>
-        <a href="https://plus.google.com/share?url=www.tapladdin.com" >
-        <%=image_tag 'google.svg', class:"social"%> </a>
+          <%=image_tag 'facebook.svg', class:"social"%></a>
+          <a href="https://plus.google.com/share?url=www.tapladdin.com" >
+            <%=image_tag 'google.svg', class:"social"%> </a>
 
-        <a href="https://twitter.com/home?status=Check%20out%20@TapLaddin%20for%20iOS%20%26%20Android%20on%20www.tapladdin.com" >
-        <%=image_tag 'twitter.svg', class:"social"%></a>
+            <a href="https://twitter.com/home?status=Check%20out%20@TapLaddin%20for%20iOS%20%26%20Android%20on%20www.tapladdin.com" >
+              <%=image_tag 'twitter.svg', class:"social"%></a>
 
 
+            </div>
+
+            <div class="innerborder ">
+
+
+              <%=image_tag 'playstore.png', class:"appstore", onclick:"comingSoon()"%>
+              <%=image_tag 'appstore.png', class:"appstore", onclick:"comingSoon()" %>
+
+            </div>
+          </div>
+
+          <div class="item active" id="levelShroom">
+            <%=image_tag 'websiteshroom.png', class:"screenshot"%>
+          </div>
+          <div class="item" id="levelHigh">
+            <%=image_tag 'websitehigh.png', class:"screenshot"%>
+          </div>
+          <div class="item" id="levelDrink">
+            <%=image_tag 'websitemain.png', class:"screenshot"%>
+          </div>
+
+
+
+        </div>
       </div>
+      <script>
+      function comingSoon() {
+        alert("Stay Tuned, Coming Soon!");
+      }
 
-      <div class="innerborder ">
+      function slideChanged() {
+        $('#laddin').attr('class',$('.item.active').attr('id') + ' ready');
+      }
 
+      $('#mountains')
+        .on('slid.bs.carousel', slideChanged);
 
-        <%=image_tag 'playstore.png', class:"appstore", onclick:"comingSoon()"%>
-        <%=image_tag 'appstore.png', class:"appstore", onclick:"comingSoon()" %>
-
-      </div>
-    </div>
-
-    <div class="item active ">
-
-      <%=image_tag 'websiteshroom.png', class:"screenshot"%>
-    </div>
-    <div class="item ">
-      <%=image_tag 'websitehigh.png', class:"screenshot"%>
-    </div>
-    <div class="item ">
-      <%=image_tag 'websitemain.png', class:"screenshot"%>
-    </div>
-
-
-
-  </div>
-</div>
-<script>
-function comingSoon() {
-  alert("Stay Tuned, Coming Soon!");
-}
-</script>
+      </script>
+<script>$('.carousel').carousel({
+  interval: 8000
+})</script>

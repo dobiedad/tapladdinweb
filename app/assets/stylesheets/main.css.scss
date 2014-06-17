@@ -2,17 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .main-div {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    z-index:99999;
-    color:red;
-    position:absolute;
-    margin-left: auto;
-width: 100%;
-text-align: center;
-font-family:"Courier New", Courier, monospace;
-font-size:14px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  z-index:99999;
+  color:red;
+  position:absolute;
+  margin-left: auto;
+  width: 100%;
+  text-align: center;
+  font-family:"Courier New", Courier, monospace;
+  font-size:14px;
 }
 .laddin{
   width:160px;
@@ -36,7 +36,7 @@ body{
 }
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   display:inline;
-min-width:100% !important;
+  min-width:100% !important;
   height:auto !important;
 
 }
@@ -55,10 +55,10 @@ h1 {
 /* Fade transition for carousel items */
 .carousel .item {
   left: 0 !important;
-  -webkit-transition: opacity 7s!important;; /*adjust timing here */
+  -webkit-transition: opacity 2s!important;; /*adjust timing here */
   -moz-transition: opacity 0.5s!important;;
   -o-transition: opacity 0.2s!important;;
-  transition: opacity 7s!important;;
+  transition: opacity 2s!important;;
   background-color:rgba(139, 69, 19, 0.3) !important;
 
 }
@@ -78,15 +78,15 @@ h1 {
 }
 img.appstore:active {
   filter: none;
- -webkit-filter: blur(1px);
+  -webkit-filter: blur(1px);
 }
 img.appstore:hover {
   filter: none;
- -webkit-filter: blur(1px);
+  -webkit-filter: blur(1px);
 }
 h1{
   font-size:28px;
-    font-family: "Courier New", Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 .appstore{
   width:155px;
@@ -105,50 +105,156 @@ h1{
   margin-left:5%;
   width:100%;
   cursor:pointer;
-    -webkit-transition-duration: 4s;
-    -moz-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
-    transition-duration: 0.8s;
-
+  -webkit-transition-duration: 4s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
 }
 .logo:hover{
   -webkit-transform:rotate(5deg);
-    -moz-transform:rotate(5deg);
-    -o-transform:rotate(5deg);
-
+  -moz-transform:rotate(5deg);
+  -o-transform:rotate(5deg);
 }
 .social {
   width:100%;
 }
 .social img {
   width:60px;
-cursor:pointer;
-opacity: 1;
+  cursor:pointer;
+  opacity: 1;
 
+}
+.anim{
+  z-index:9999;
+  position:absolute;
 }
 .social img:hover {
   opacity: .8;
 
 }
-@media screen and (min-width : 760px){
-.logo {
-  margin-left:5%;
-  width:60%;
+@-webkit-keyframes laddin-x {
+  0% {
+    left:-10%;
+    -webkit-animation-timing-function:linear;
+  }
+  80% {
+    left:110%;
+    -webkit-animation-timing-function:linear;
+  }
+  100% {
+    left:110%;
+    -webkit-animation-timing-function:linear;
+  }
 }
+@-webkit-keyframes high {
+  0% {
+    top:30%;
+  }
+  20% {
+    top:35%;
+  }
+  40% {
+    top:50%;
+  }
+  60% {
+    top:45%;
+  }
+  80% {
+    top:50%;
+  }
+  100% {
+    top:50%;
+  }
+}
+@-webkit-keyframes shroom {
+  0% {
+    top:30%;
+  }
+  20% {
+    top:35%;
+  }
+  40% {
+    top:40%;
+  }
+  60% {
+    top:30%;
+  }
+  70% {
+    top:28%;
+  }
+  80% {
+    top:25%;
+  }
+  100% {
+    top:25%;
+  }
+}
+@-webkit-keyframes drink {
+  0% {
+    top:40%;
+  }
+  20% {
+    top:45%;
+  }
+  40% {
+    top:45%;
+  }
+  60% {
+    top:40%;
+  }
+  70% {
+    top:45%;
+  }
+  80% {
+    top:40%;
+  }
+  100% {
+    top:40%;
+  }
+}
+#laddin {
+  position:absolute;
+  z-index:1000;
+  display:none;
+  background-image:url('laddinwebsite.png');
+  width:120px;
+  height:140px;
+
+}
+#laddin.ready {
+  -webkit-animation-duration:8s;
+  -webkit-animation-iteration-count:infinite;
+  display:block;
+}
+#laddin.ready.levelShroom {
+  -webkit-animation-name:shroom,laddin-x;
+}
+#laddin.ready.levelHigh {
+  -webkit-animation-name:high,laddin-x;
+}
+#laddin.ready.levelDrink {
+  -webkit-animation-name:drink,laddin-x;
+}
+
+@media screen and (min-width : 760px){
+  .logo {
+    margin-left:5%;
+    width:60%;
+  }
 }
 
 @media screen and (max-width : 1100px){
   .carousel-inner > .item > img, .carousel-inner > .item > a > img{
 
-  width:auto;
+    width:auto;
     height: auto;
-  max-width: 100%;
-  background-size: auto auto; /* Fill width, retain proportions */
+    max-width: 100%;
+    background-size: auto auto; /* Fill width, retain proportions */
 
-}
-.laddin{
-  width:160px;
-}
+  }
+  .laddin{
+    width:160px;
+  }
 
 }
 @media screen and (max-width : 460px){
