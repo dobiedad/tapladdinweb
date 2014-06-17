@@ -52,30 +52,7 @@ body{
 h1 {
   color:white;
 }
-/* Fade transition for carousel items */
-.carousel .item {
-  left: 0 !important;
-  -webkit-transition: opacity 2s!important;; /*adjust timing here */
-  -moz-transition: opacity 0.5s!important;;
-  -o-transition: opacity 0.2s!important;;
-  transition: opacity 2s!important;;
-  background-color:rgba(139, 69, 19, 0.3) !important;
 
-}
-.carousel-control {
-  background-image: none !important; /* remove background gradients on controls */
-}
-/* Fade controls with items */
-.next.left,
-.prev.right {
-  opacity: 1;
-  z-index: 1;
-}
-.active.left,
-.active.right {
-  opacity: 0;
-  z-index: 2;
-}
 img.appstore:active {
   filter: none;
   -webkit-filter: blur(1px);
@@ -105,11 +82,11 @@ h1{
   margin-left:5%;
   width:100%;
   cursor:pointer;
-  -webkit-transition-duration: 4s;
-  -moz-transition-duration: 0.8s;
-  -o-transition-duration: 0.8s;
-  transition-duration: 0.8s;
+
+  z-index:9999;
+
 }
+
 .logo:hover{
   -webkit-transform:rotate(5deg);
   -moz-transform:rotate(5deg);
@@ -136,7 +113,93 @@ h1{
   0% {
     left:-10%;
     -webkit-animation-timing-function:linear;
+    background-image:image-url('laddinwebsite1.png');
+
   }
+  2%{
+    background-image:image-url('laddinwebsite.png');
+
+  }
+  3%{
+    background-image:image-url('laddinwebsite1.png');
+
+  }
+  4%{
+background-image:image-url('laddinwebsite1.png');
+
+  }
+  10%{
+background-image:image-url('laddinwebsite.png');
+
+  }
+  11%{
+background-image:image-url('laddinwebsite1.png');
+
+  }
+  20%{
+background-image:image-url('laddinwebsite.png');
+
+  }
+  21%{
+    background-image:image-url('laddinwebsite1.png');
+
+  }
+  30%{
+background-image:image-url('laddinwebsite.png');
+
+  }
+  31%{
+    background-image:image-url('laddinwebsite1.png');
+
+  }
+  40%{
+background-image:image-url('laddinwebsite1.png');
+
+  }
+  44%{
+background-image:image-url('laddinwebsite.png');
+
+  }
+  45%{
+background-image:image-url('laddinwebsite1.png');
+
+  }
+  50%{
+background-image:image-url('laddinwebsite.png');
+
+  }
+  51%{
+    background-image:image-url('laddinwebsite1.png');
+
+  }
+  60%{
+background-image:image-url('laddinwebsite1.png');
+
+  }
+  70%{
+background-image:image-url('laddinwebsite.png');
+
+  }
+  71%{
+background-image:image-url('laddinwebsite1.png');
+
+  }
+  80%{
+background-image:image-url('laddinwebsite.png');
+
+  }81%{
+background-image:image-url('laddinwebsite1.png');
+
+  }
+  90%{
+background-image:image-url('laddinwebsite.png');
+
+  }
+  91%{
+background-image:image-url('laddinwebsite1.png');
+
+  }
+
   80% {
     left:110%;
     -webkit-animation-timing-function:linear;
@@ -149,107 +212,91 @@ h1{
 @-webkit-keyframes high {
   0% {
     top:30%;
-    background-image:image-url('laddinwebsite1.png');
 
   }
   20% {
-    top:35%;
-    background-image:image-url('laddinwebsite.png');
+    top:40%;
 
   }
   40% {
     top:50%;
-    background-image:image-url('laddinwebsite1.png');
 
   }
   60% {
     top:45%;
-    background-image:image-url('laddinwebsite.png');
 
   }
   80% {
     top:50%;
-    background-image:image-url('laddinwebsite1.png');
 
   }
   100% {
     top:50%;
-    background-image:image-url('laddinwebsite.png');
 
   }
 }
 @-webkit-keyframes shroom {
   0% {
     top:30%;
-    background-image:image-url('laddinwebsite1.png');
 
 
   }
   20% {
-    top:35%;
-    background-image:image-url('laddinwebsite.png');
+    top:40%;
 
   }
+  22% {
+
+  }
+
   40% {
     top:40%;
-    background-image:image-url('laddinwebsite1.png');
 
   }
   60% {
     top:30%;
-    background-image:image-url('laddinwebsite.png');
 
   }
   70% {
     top:28%;
-    background-image:image-url('laddinwebsite1.png');
 
   }
   80% {
     top:25%;
-    background-image:image-url('laddinwebsite.png');
 
   }
   100% {
     top:25%;
-    background-image:image-url('laddinwebsite1.png');
 
   }
 }
 @-webkit-keyframes drink {
   0% {
     top:40%;
-    background-image:image-url('laddinwebsite1.png');
 
   }
   20% {
     top:45%;
-    background-image:image-url('laddinwebsite.png');
 
   }
   40% {
-    top:45%;
-    background-image:image-url('laddinwebsite1.png');
+    top:55%;
 
   }
   60% {
-    top:40%;
-    background-image:image-url('laddinwebsite.png');
+    top:50%;
 
   }
   70% {
     top:45%;
-    background-image:image-url('laddinwebsite1.png');
 
   }
   80% {
     top:40%;
-    background-image:image-url('laddinwebsite.png');
 
   }
   100% {
     top:40%;
-    background-image:image-url('laddinwebsite1.png');
 
   }
 }
@@ -261,6 +308,52 @@ h1{
   width:120px;
   height:140px;
 
+}
+#wrap{
+  position:absolute;
+  z-index:10;
+
+  top:40%;
+  right:70%;
+  -webkit-animation-duration: 3s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+     -webkit-transform-origin: bottom center;
+    transform-origin: bottom center;
+    -webkit-animation-name: swing;
+    animation-name: swing;
+}
+.wrap{
+  width:70px;
+  height:90px;
+}
+#wrap1{
+  position:absolute;
+  z-index:10;
+
+  bottom:30%;
+  left:70%;
+  -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+     -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+    animation-name: swing;
+}
+.wrap1{
+  width:70px;
+  height:90px;
 }
 #laddin.ready {
   -webkit-animation-duration:6s;
@@ -276,7 +369,21 @@ h1{
 #laddin.ready.levelDrink {
   -webkit-animation-name:drink,laddin-x;
 }
-
+@-webkit-keyframes swing {
+    20%, 40%, 60%, 80%, 100% { -webkit-transform-origin: top center; }
+    20% { -webkit-transform: rotate(15deg); }
+    40% { -webkit-transform: rotate(-10deg); }
+    60% { -webkit-transform: rotate(5deg); }
+    80% { -webkit-transform: rotate(-5deg); }
+    100% { -webkit-transform: rotate(0deg); }
+}
+@keyframes swing {
+    20% { transform: rotate(15deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(5deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
 @media screen and (min-width : 760px){
   .logo {
     margin-left:5%;
