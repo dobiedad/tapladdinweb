@@ -46,6 +46,8 @@ min-width:100% !important;
 .carousel-caption{
   position:fixed;
   margin-bottom:-15px;
+  left:0;
+  right:0;
 }
 h1 {
   color:white;
@@ -87,7 +89,7 @@ h1{
     font-family: "Courier New", Courier, monospace;
 }
 .appstore{
-  width:160px;
+  width:155px;
   height:60px;
   margin-top:5px;
   border-radius:10px;
@@ -114,6 +116,13 @@ h1{
     -moz-transform:rotate(5deg);
     -o-transform:rotate(5deg);
 
+}
+.social {
+  width:100%;
+}
+.social img {
+  width:60px;
+cursor:pointer;
 }
 @media screen and (min-width : 760px){
 .logo {
