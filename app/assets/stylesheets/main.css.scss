@@ -112,8 +112,12 @@ h1{
   position:absolute;
 }
 .social img:hover {
-  opacity: .8;
-
+filter: none;
+-webkit-filter: blur(1px);
+}
+.social img:active {
+filter: none;
+-webkit-filter: blur(1px);
 }
 @-webkit-keyframes logo {
   50% {
@@ -263,11 +267,11 @@ background-image:image-url('laddinwebsite.png');
 
   }
   40% {
-    top:50%;
+    top:42%;
 
   }
   60% {
-    top:45%;
+    top:40%;
 
   }
   80% {
@@ -360,7 +364,7 @@ background-image:image-url('laddinwebsite.png');
 -webkit-animation-duration:6s;
 -webkit-animation-iteration-count:infinite;
   top:70%;
-  right:75%;
+  left:30%;
   -webkit-animation-duration: 3s;
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
@@ -454,5 +458,8 @@ background-image:image-url('laddinwebsite.png');
 @media screen and (max-width : 460px){
   h1{
     font-size:22px;
+  }
+  #wrap{
+    display:none;
   }
 }
