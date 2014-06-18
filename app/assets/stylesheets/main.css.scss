@@ -33,11 +33,14 @@ body{
 }
 .carousel {
   min-width:100%;
+  cursor: url(laddinwebsite.png), auto ;
+
 }
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   display:inline;
   min-width:100% !important;
   height:auto !important;
+
 
 }
 .carousel-inner{
@@ -84,13 +87,16 @@ h1{
   cursor:pointer;
 
   z-index:9999;
+  -webkit-animation-name:logo;
+-webkit-animation-duration:2s;
+-webkit-animation-iteration-count:infinite;
+-webkit-transition-timing-function:linear /* Safari and Chrome */
+
 
 }
 
 .logo:hover{
-  -webkit-transform:rotate(5deg);
-  -moz-transform:rotate(5deg);
-  -o-transform:rotate(5deg);
+  -webkit-transform: scale(1.1);
 }
 .social {
   width:100%;
@@ -109,23 +115,24 @@ h1{
   opacity: .8;
 
 }
+@-webkit-keyframes logo {
+  50% {
+-webkit-transform: scale(.7);
+  }
+
+}
 @-webkit-keyframes laddin-x {
   0% {
     left:-10%;
     -webkit-animation-timing-function:linear;
-    background-image:image-url('laddinwebsite1.png');
 
   }
   2%{
     background-image:image-url('laddinwebsite.png');
 
   }
-  3%{
+  6%{
     background-image:image-url('laddinwebsite1.png');
-
-  }
-  4%{
-background-image:image-url('laddinwebsite1.png');
 
   }
   10%{
@@ -136,32 +143,20 @@ background-image:image-url('laddinwebsite.png');
 background-image:image-url('laddinwebsite1.png');
 
   }
-  20%{
+  18%{
 background-image:image-url('laddinwebsite.png');
 
   }
-  21%{
+  19%{
+background-image:image-url('laddinwebsite.png');
+
+  }
+  42%{
+    background-image:image-url('laddinwebsite.png');
+
+  }
+  46%{
     background-image:image-url('laddinwebsite1.png');
-
-  }
-  30%{
-background-image:image-url('laddinwebsite.png');
-
-  }
-  31%{
-    background-image:image-url('laddinwebsite1.png');
-
-  }
-  40%{
-background-image:image-url('laddinwebsite1.png');
-
-  }
-  44%{
-background-image:image-url('laddinwebsite.png');
-
-  }
-  45%{
-background-image:image-url('laddinwebsite1.png');
 
   }
   50%{
@@ -169,36 +164,85 @@ background-image:image-url('laddinwebsite.png');
 
   }
   51%{
-    background-image:image-url('laddinwebsite1.png');
-
-  }
-  60%{
 background-image:image-url('laddinwebsite1.png');
 
   }
-  70%{
+  58%{
 background-image:image-url('laddinwebsite.png');
 
   }
-  71%{
-background-image:image-url('laddinwebsite1.png');
-
-  }
-  80%{
-background-image:image-url('laddinwebsite.png');
-
-  }81%{
-background-image:image-url('laddinwebsite1.png');
-
-  }
-  90%{
+  59%{
 background-image:image-url('laddinwebsite.png');
 
   }
-  91%{
-background-image:image-url('laddinwebsite1.png');
+//   20%{
+// background-image:image-url('laddinwebsite1.png');
+//
+//   }
+//   21%{
+//     background-image:image-url('laddinwebsite.png');
+//
+//   }
+//   30%{
+// background-image:image-url('laddinwebsite1.png');
+//
+//   }
+//   31%{
+//     background-image:image-url('laddinwebsite.png');
+//
+//   }
+//   40%{
+// background-image:image-url('laddinwebsite1.png');
+//
+//   }
+//   41%{
+// background-image:image-url('laddinwebsite.png');
+//
+//   }
+//   45%{
+// background-image:image-url('laddinwebsite1.png');
+//
+//   }
+//   46%{
+// background-image:image-url('laddinwebsite.png');
+//
+//   }
+//   51%{
+//     background-image:image-url('laddinwebsite1.png');
+//
+//   }
+//   52%{
+// background-image:image-url('laddinwebsite.png');
+//
+//   }
+//   70%{
+// background-image:image-url('laddinwebsite1.png');
+//
+//   }
+//   71%{
+// background-image:image-url('laddinwebsite.png');
+//
+//   }
+//   80%{
+// background-image:image-url('laddinwebsite1.png');
+//
+//   }81%{
+// background-image:image-url('laddinwebsite.png');
+//
+//   }
+//   90%{
+// background-image:image-url('laddinwebsite.png');
+//
+//   }
+//   91%{
+// background-image:image-url('laddinwebsite.png');
+//
+//   }
+//   91%{
+// background-image:image-url('laddinwebsite.png');
+//
+//   }
 
-  }
 
   80% {
     left:110%;
@@ -245,20 +289,18 @@ background-image:image-url('laddinwebsite1.png');
     top:40%;
 
   }
-  22% {
 
-  }
 
   40% {
     top:40%;
 
   }
   60% {
-    top:30%;
+    top:45%;
 
   }
   70% {
-    top:28%;
+    top:35%;
 
   }
   80% {
@@ -276,11 +318,11 @@ background-image:image-url('laddinwebsite1.png');
 
   }
   20% {
-    top:45%;
+    top:40%;
 
   }
   40% {
-    top:55%;
+    top:45%;
 
   }
   60% {
@@ -300,6 +342,8 @@ background-image:image-url('laddinwebsite1.png');
 
   }
 }
+#tune{
+  display:none;}
 #laddin {
   position:absolute;
   z-index:1000;
@@ -312,9 +356,11 @@ background-image:image-url('laddinwebsite1.png');
 #wrap{
   position:absolute;
   z-index:10;
-
-  top:40%;
-  right:70%;
+  -webkit-animation-name:wrap;
+-webkit-animation-duration:6s;
+-webkit-animation-iteration-count:infinite;
+  top:70%;
+  right:75%;
   -webkit-animation-duration: 3s;
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
@@ -336,7 +382,7 @@ background-image:image-url('laddinwebsite1.png');
   position:absolute;
   z-index:10;
 
-  bottom:30%;
+  top:35%;
   left:70%;
   -webkit-animation-duration: 5s;
     animation-duration: 5s;

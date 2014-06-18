@@ -14,7 +14,7 @@
 
 
 
-    <a href="/"> <%=image_tag 'logo.svg', class:"logo"%> </a>
+ <%=image_tag 'logo.svg', class:"logo"%>
 
 
   </div>
@@ -41,13 +41,22 @@
 
               <%=image_tag 'playstore.png', class:"appstore", onclick:"comingSoon()"%>
               <%=image_tag 'appstore.png', class:"appstore", onclick:"comingSoon()" %>
+              <br>
+              <%= audio_tag "laddin.mp3",volume:0.5, controls: true, loop: true %>
+</br>
 
             </div>
           </div>
 
           <div class="item active" id="levelShroom">
             <%=image_tag 'websiteshroom.png', class:"screenshot"%>
+
+            <div class="firstslide">
+<%=image_tag 'google.svg', class:"screenshot"%>
+
           </div>
+        </div>
+
           <div class="item" id="levelHigh">
             <%=image_tag 'websitehigh.png', class:"screenshot"%>
           </div>
@@ -75,3 +84,10 @@
 <script>$('.carousel').carousel({
   interval: 6000
 })</script>
+<script>
+$("#wrap").click(function() {
+            $(this).hide();
+            var div = document.getElementById("tune");
+            div.parentNode.removeChild(div);
+        });
+</script>
